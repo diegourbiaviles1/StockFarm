@@ -1,0 +1,22 @@
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\bin\Debug\Stock Farm 2.0.exe.config
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\bin\Debug\Stock Farm 2.0.exe
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\bin\Debug\Stock Farm 2.0.pdb
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.csproj.AssemblyReference.cache
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.Properties.Resources.resources
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.csproj.GenerateResource.cache
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.csproj.CoreCompileInputs.cache
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.exe
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.pdb
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.FormBusqueda.resources
+C:\Users\diego\source\repos\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.StockFarm.resources
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\bin\Debug\Stock Farm 2.0.exe.config
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\bin\Debug\Stock Farm 2.0.exe
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\bin\Debug\Stock Farm 2.0.pdb
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.StockFarm.resources
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.FormBusqueda.resources
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.Properties.Resources.resources
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.exe
+C:\Users\diego\Desktop\Stock Farm 2.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.pdb
