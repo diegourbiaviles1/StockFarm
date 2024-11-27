@@ -54,7 +54,35 @@ namespace Stock_Farm_2._0
         private void ActualizarGridView()
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = vacas;
+
+            // Crear una lista de datos para mostrar en el DataGridView
+            var vacasData = vacas.Select((v, index) => new
+            {
+                ID = v.Id,
+                Arete = v.Arete,
+                Raza = v.Raza,
+                Sexo = v.Sexo,
+                Nacimiento = v.FechaNacimiento.ToShortDateString(),
+                Vacuna = v.ControlVacuna ? v.FechaVacuna.ToShortDateString() : "N/A",
+                Desparasitante = v.ControlDesparasitante ? v.FechaDesparacitada.ToShortDateString() : "N/A",
+                Pesos = string.Join(", ", v.ControlPeso),
+                Imagen = v.Imagen != null ? ConvertirBytesAImagen(v.Imagen) : null,
+            }).ToList();
+
+            dataGridView1.DataSource = vacasData;
+
+            // Configuración de columnas
+            if (dataGridView1.Columns["Imagen"] == null)
+            {
+                var imageColumn = new DataGridViewImageColumn
+                {
+                    DataPropertyName = "Imagen",
+                    HeaderText = "Imagen",
+                    ImageLayout = DataGridViewImageCellLayout.Zoom
+                };
+                dataGridView1.Columns.Add(imageColumn);
+            }
+
         }
         private void chkVacuna_CheckedChanged(object sender, EventArgs e)
         {
@@ -76,14 +104,14 @@ namespace Stock_Farm_2._0
         {
 
         }
-        private byte[] ConvertirImagenABytes(Image imagen)
+        private Image ConvertirBytesAImagen(byte[] bytes)
         {
-            using (MemoryStream ms = new MemoryStream())
+            using (MemoryStream ms = new MemoryStream(bytes))
             {
-                imagen.Save(ms, imagen.RawFormat);
-                return ms.ToArray();
+                return Image.FromStream(ms);
             }
         }
+
 
         private void txtArete_TextChanged(object sender, EventArgs e)
         {
@@ -160,6 +188,16 @@ namespace Stock_Farm_2._0
             }
 
             vaca.ControlPeso = controlPesos;
+            // Convertir imagen si existe
+            if (pictureBox1.Image != null)
+            {
+                vaca.Imagen = ConvertirBytesAImagen(pictureBox1.Image);
+            }
+            else
+            {
+                vaca.Imagen = null; // No hay imagen
+            }
+
 
             // Agregar vaca a la lista y resetear campos del formulario
             vacas.Add(vaca);
@@ -252,9 +290,19 @@ namespace Stock_Farm_2._0
                         }
 
                         vaca.ControlPeso = controlPesos;
+                // Actualizar la imagen si existe en el PictureBox
+                if (pictureBox1.Image != null)
+                {
+                    vacas[VacaSeleccionada].Imagen = ConvertirBytesAImagen(pictureBox1.Image);
+                }
+                else
+                {
+                    vacas[VacaSeleccionada].Imagen = null; // Limpiar imagen si no hay
+                }
 
-                        // Actualizar vaca en la lista y resetear campos del formulario
-                            vacas[VacaSeleccionada] = vaca;
+
+                // Actualizar vaca en la lista y resetear campos del formulario
+                vacas[VacaSeleccionada] = vaca;
                             txtArete.Text = "\n";
                             cmbRaza.Text = "\n";
                             txtPeso.Text = "\n";
@@ -274,63 +322,44 @@ namespace Stock_Farm_2._0
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (dataGridView1.CurrentRow != null)
+            if (e.RowIndex >= 0) // Validar que el clic es en una fila válida
             {
                 try
                 {
-                    Vaca vacaRow = (Vaca)dataGridView1.CurrentRow.DataBoundItem;
-                    VacaSeleccionada = vacaRow.Id;
+                    // Obtener el índice desde la fila seleccionada
+                    int index = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Index"].Value);
+                    VacaSeleccionada = index; // Guardar el índice de la vaca seleccionada
 
-                    int index = -1;
-                    for (int i = 0; i < vacas.Count; i++)
+                    // Recuperar la vaca original desde la lista
+                    Vaca vacaRow = vacas[VacaSeleccionada];
+
+                    // Llenar los campos del formulario con los datos de la vaca seleccionada
+                    txtArete.Text = vacaRow.Arete;
+                    cmbRaza.Text = vacaRow.Raza;
+                    txtPeso.Text = string.Join(",", vacaRow.ControlPeso);
+                    dateTimePickerBorn.Value = vacaRow.FechaNacimiento;
+                    chkVacuna.Checked = vacaRow.ControlVacuna;
+                    chkDesparacitada.Checked = vacaRow.ControlDesparasitante;
+                    dateTimePickerVacuna.Value = vacaRow.FechaVacuna;
+                    dateTimePickerDesparacitada.Value = vacaRow.FechaDesparacitada;
+                    rdMacho.Checked = vacaRow.Sexo == 'M';
+                    rdHembra.Checked = vacaRow.Sexo == 'F';
+
+                    if (vacaRow.Imagen != null)
                     {
-                        if (vacas[i].Id == VacaSeleccionada) index = i;
+                        using (MemoryStream ms = new MemoryStream(vacaRow.Imagen))
+                        {
+                            pictureBox1.Image = Image.FromStream(ms);
+                        }
                     }
-
-                    if (index != -1)
+                    else
                     {
-                        // Llenar campos del formulario con los datos de la vaca seleccionada
-                        txtArete.Text = vacas[index].Arete;
-                        cmbRaza.Text = vacas[index].Raza;
-                        txtPeso.Text = vacas[index].ControlPeso.ToString();
-                        dateTimePickerBorn.Value = vacas[index].FechaNacimiento;
-                        chkVacuna.Checked = vacas[index].ControlVacuna;
-                        chkDesparacitada.Checked = vacas[index].ControlDesparasitante;
-                        dateTimePickerVacuna.Value = vacas[index].FechaVacuna;
-                        dateTimePickerDesparacitada.Value = vacas[index].FechaDesparacitada;
-                        rdMacho.Checked = false;
-                        rdHembra.Checked = false;
-
-                        if (vacas[index].Sexo == 'M') rdMacho.Checked = true;
-                       
-                        if (vacas[index].Sexo == 'F') rdHembra.Checked = true;
-
-                        string pesos = "";
-                        for (int i = 0; i < vacas[index].ControlPeso.Count; i++)
-                        {
-                            pesos += vacas[index].ControlPeso[i].ToString();
-                            if (i < vacas[index].ControlPeso.Count - 1) pesos += '\n';
-                        }
-
-                        txtPeso.Text = pesos;
-
-                        if (vacas[index].Imagen != null)
-                        {
-                            using (MemoryStream ms = new MemoryStream(vacas[index].Imagen))
-                            {
-                                pictureBox1.Image = Image.FromStream(ms); // Asignar la imagen al PictureBox
-                            }
-                        }
-                        else
-                        {
-                            pictureBox1.Image = null; // Si no hay imagen, limpiar el PictureBox
-                        }
-
+                        pictureBox1.Image = null;
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("¡Error al seleccionar!\n" + ex, "Seleccionar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("¡Error al seleccionar!\n" + ex.Message, "Seleccionar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -399,8 +428,25 @@ namespace Stock_Farm_2._0
                 // Si se está editando o agregando, asigna la imagen
                 if (VacaSeleccionada >= 0)
                 {
-                    vacas[VacaSeleccionada].Imagen = ConvertirImagenABytes(imagen);
+                    vacas[VacaSeleccionada].Imagen = ConvertirBytesAImagen(imagen);
                 }
+            }
+        }
+
+        private byte[] ConvertirBytesAImagen(Image imagen)
+        {
+            try
+            {
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    imagen.Save(ms, imagen.RawFormat);
+                    return ms.ToArray();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al convertir la imagen: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
     }
