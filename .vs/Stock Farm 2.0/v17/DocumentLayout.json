@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\",
+  "WorkspaceRootPath": "C:\\Users\\diego\\source\\repos\\StockFarm1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\FormBusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|solutionrelative:Stock Farm 2.0\\FormBusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\stock farm 2.0\\formbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|solutionrelative:stock farm 2.0\\formbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|c:\\users\\diego\\desktop\\stock farm 2.0\\stock farm 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|C:\\Users\\diego\\source\\repos\\StockFarm1\\stock farm 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|solutionrelative:stock farm 2.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\Vaca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|C:\\Users\\diego\\source\\repos\\StockFarm1\\stock farm 2.0\\formbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|solutionrelative:stock farm 2.0\\formbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|solutionrelative:Stock Farm 2.0\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\Vaca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|solutionrelative:Stock Farm 2.0\\Vaca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|solutionrelative:Stock Farm 2.0\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|c:\\users\\diego\\source\\repos\\stockfarm1\\stock farm 2.0\\formbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22E97385-7871-4D97-9881-6614209EBFAF}|Stock Farm 2.0\\Stock Farm 2.0.csproj|solutionrelative:stock farm 2.0\\formbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,6 +43,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -70,15 +74,19 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "FormBusqueda.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\FormBusqueda.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\FormBusqueda.cs",
               "RelativeDocumentMoniker": "Stock Farm 2.0\\FormBusqueda.cs",
-              "ToolTip": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\FormBusqueda.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\FormBusqueda.cs",
               "RelativeToolTip": "Stock Farm 2.0\\FormBusqueda.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -86,26 +94,31 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Vaca.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\Vaca.cs",
-              "RelativeDocumentMoniker": "Stock Farm 2.0\\Vaca.cs",
-              "ToolTip": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\Vaca.cs",
-              "RelativeToolTip": "Stock Farm 2.0\\Vaca.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAswFUAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T03:24:14.036Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "Vaca.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\Vaca.cs",
+              "RelativeDocumentMoniker": "Stock Farm 2.0\\Vaca.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\Vaca.cs",
+              "RelativeToolTip": "Stock Farm 2.0\\Vaca.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:24:14.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\Form1.cs",
               "RelativeDocumentMoniker": "Stock Farm 2.0\\Form1.cs",
-              "ToolTip": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\Form1.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\Form1.cs",
               "RelativeToolTip": "Stock Farm 2.0\\Form1.cs",
-              "ViewState": "AgIAAD8BAAAAAAAAAAD4v2UBAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAA4wGQBAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T02:46:23.748Z",
               "EditorCaption": ""
@@ -114,9 +127,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "FormBusqueda.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\FormBusqueda.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\FormBusqueda.cs",
               "RelativeDocumentMoniker": "Stock Farm 2.0\\FormBusqueda.cs",
-              "ToolTip": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\FormBusqueda.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\FormBusqueda.cs [Dise\u00F1o]",
               "RelativeToolTip": "Stock Farm 2.0\\FormBusqueda.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T01:11:07.272Z",
@@ -124,11 +137,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\Form1.cs",
               "RelativeDocumentMoniker": "Stock Farm 2.0\\Form1.cs",
-              "ToolTip": "C:\\Users\\diego\\Desktop\\Stock Farm 2.0\\Stock Farm 2.0\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\StockFarm1\\Stock Farm 2.0\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Stock Farm 2.0\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T02:37:40.642Z",

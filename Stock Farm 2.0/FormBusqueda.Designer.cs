@@ -32,7 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,8 +40,7 @@
             this.menuStrip1.BackColor = System.Drawing.Color.DarkGreen;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestiToolStripMenuItem,
-            this.busquedaToolStripMenuItem,
-            this.exportarDatosToolStripMenuItem});
+            this.busquedaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1030, 24);
@@ -51,6 +49,7 @@
             // 
             // gestiToolStripMenuItem
             // 
+            this.gestiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.gestiToolStripMenuItem.Name = "gestiToolStripMenuItem";
             this.gestiToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
             this.gestiToolStripMenuItem.Text = "Gestión de Ganado";
@@ -58,15 +57,10 @@
             // 
             // busquedaToolStripMenuItem
             // 
+            this.busquedaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.busquedaToolStripMenuItem.Name = "busquedaToolStripMenuItem";
-            this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.busquedaToolStripMenuItem.Text = "Busqueda";
-            // 
-            // exportarDatosToolStripMenuItem
-            // 
-            this.exportarDatosToolStripMenuItem.Name = "exportarDatosToolStripMenuItem";
-            this.exportarDatosToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.exportarDatosToolStripMenuItem.Text = "Exportar Datos";
+            this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.busquedaToolStripMenuItem.Text = "Reportes";
             // 
             // FormBusqueda
             // 
@@ -90,6 +84,5 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gestiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem busquedaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportarDatosToolStripMenuItem;
     }
 }

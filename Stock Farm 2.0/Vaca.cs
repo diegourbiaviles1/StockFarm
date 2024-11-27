@@ -33,6 +33,9 @@ namespace Stock_Farm_2._0
                 }
             }
 
+            public byte[] Imagen { get; set; }
+
+
         }
 
         public class GestorDeDatos
@@ -44,15 +47,13 @@ namespace Stock_Farm_2._0
                     using (FileStream archivo = new FileStream(archivoPath, FileMode.Create))
                     using (BinaryWriter escritor = new BinaryWriter(archivo))
                     {
-                        // Escribir la cantidad de vacas
-                        escritor.Write(vacas.Count);
+                        escritor.Write(vacas.Count); // Escribir la cantidad de vacas
 
                         foreach (Vaca vaca in vacas)
                         {
                             escritor.Write(vaca.Arete);
                             escritor.Write(vaca.Raza);
 
-                            // Guardar fechas (Nacimiento, Desparasitada, Vacuna)
                             escritor.Write(vaca.FechaNacimiento.Day);
                             escritor.Write(vaca.FechaNacimiento.Month);
                             escritor.Write(vaca.FechaNacimiento.Year);
@@ -69,11 +70,21 @@ namespace Stock_Farm_2._0
                             escritor.Write(vaca.ControlDesparasitante);
                             escritor.Write(vaca.Sexo);
 
-                            // Guardar pesos
                             escritor.Write(vaca.ControlPeso.Count);
                             foreach (Decimal peso in vaca.ControlPeso)
                             {
                                 escritor.Write(peso);
+                            }
+
+                            // Guardar la imagen
+                            if (vaca.Imagen != null)
+                            {
+                                escritor.Write(vaca.Imagen.Length); // Escribir la longitud de la imagen
+                                escritor.Write(vaca.Imagen);        // Escribir los bytes de la imagen
+                            }
+                            else
+                            {
+                                escritor.Write(0); // Si no hay imagen, escribir longitud 0
                             }
                         }
                     }
@@ -88,69 +99,71 @@ namespace Stock_Farm_2._0
 
                 public List<Vaca> LeerArchivo(string archivoPath)
                 {
-                    if (!File.Exists(archivoPath))
-                    {
-                        MessageBox.Show("Error cargando el archivo!\n" + "El archivo no existe!", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return new List<Vaca>() { };
-                    }
+                   if (!File.Exists(archivoPath))
+    {
+        MessageBox.Show("El archivo no existe!", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        return new List<Vaca>();
+    }
 
-                    try
-                    {
-                        List<Vaca> ListaRetorno = new List<Vaca>() { };
-                        FileStream archivo = new FileStream(archivoPath, FileMode.Open, FileAccess.Read);
-                        BinaryReader lector = new BinaryReader(archivo);
-                        int cantidadVacas = lector.ReadInt32();
+    try
+    {
+        List<Vaca> vacas = new List<Vaca>();
+        using (FileStream archivo = new FileStream(archivoPath, FileMode.Open, FileAccess.Read))
+        using (BinaryReader lector = new BinaryReader(archivo))
+        {
+            int cantidadVacas = lector.ReadInt32();
 
-                        for (int i = 0; i < cantidadVacas; i++)
-                        {
-                            Vaca vacaActual = new Vaca();
-                            vacaActual.Id = i;
-                            vacaActual.Arete = lector.ReadString();
-                            vacaActual.Raza = lector.ReadString();
+            for (int i = 0; i < cantidadVacas; i++)
+            {
+                Vaca vaca = new Vaca();
+                vaca.Id = i;
+                vaca.Arete = lector.ReadString();
+                vaca.Raza = lector.ReadString();
 
-                            // Leer la fecha de nacimiento de la vaca
-                            int diaNacimientoVaca = lector.ReadInt32();
-                            int mesNacimientoVaca = lector.ReadInt32();
-                            int añoNacimientoVaca = lector.ReadInt32();
+                int diaNacimiento = lector.ReadInt32();
+                int mesNacimiento = lector.ReadInt32();
+                int añoNacimiento = lector.ReadInt32();
+                vaca.FechaNacimiento = new DateTime(añoNacimiento, mesNacimiento, diaNacimiento);
 
-                            // Leer la fecha de desparasitada de la vaca
-                            int diaDesparasitadaVaca = lector.ReadInt32();
-                            int mesDesparasitadaVaca = lector.ReadInt32();
-                            int añoDesparasitadaVaca = lector.ReadInt32();
+                int diaDesparacitada = lector.ReadInt32();
+                int mesDesparacitada = lector.ReadInt32();
+                int añoDesparacitada = lector.ReadInt32();
+                vaca.FechaDesparacitada = new DateTime(añoDesparacitada, mesDesparacitada, diaDesparacitada);
 
+                int diaVacuna = lector.ReadInt32();
+                int mesVacuna = lector.ReadInt32();
+                int añoVacuna = lector.ReadInt32();
+                vaca.FechaVacuna = new DateTime(añoVacuna, mesVacuna, diaVacuna);
 
-                            // Leer la fecha de vacuna de la vaca
-                            int diaVacunaVaca = lector.ReadInt32();
-                            int mesVacunaVaca = lector.ReadInt32();
-                            int añoVacunaVaca = lector.ReadInt32();
+                vaca.ControlVacuna = lector.ReadBoolean();
+                vaca.ControlDesparasitante = lector.ReadBoolean();
+                vaca.Sexo = lector.ReadChar();
 
-                            vacaActual.FechaNacimiento = new DateTime(añoNacimientoVaca, mesNacimientoVaca, diaNacimientoVaca);
-                            vacaActual.ControlVacuna = lector.ReadBoolean();
-                            vacaActual.ControlDesparasitante = lector.ReadBoolean();
-                            vacaActual.Sexo = lector.ReadChar();
-                            int cantidadPesos = lector.ReadInt32();
-                            List<Decimal> pesos = new List<Decimal>() { };
+                int cantidadPesos = lector.ReadInt32();
+                for (int j = 0; j < cantidadPesos; j++)
+                {
+                    vaca.ControlPeso.Add(lector.ReadDecimal());
+                }
 
-                            for (int j = 0; j < cantidadPesos; j++)
-                            {
-                                pesos.Add(lector.ReadDecimal());
-                            }
+                // Leer la imagen
+                int longitudImagen = lector.ReadInt32();
+                if (longitudImagen > 0)
+                {
+                    vaca.Imagen = lector.ReadBytes(longitudImagen);
+                }
 
-                            vacaActual.ControlPeso = pesos;
-                            ListaRetorno.Add(vacaActual);
-                        }
+                vacas.Add(vaca);
+            }
+        }
 
-                        MessageBox.Show("Archivo cargado con éxito!", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        lector.Close();
-                        archivo.Close();
-
-                        return ListaRetorno;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error cargando el archivo!\n" + ex, "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return new List<Vaca>() { };
-                    }
+        MessageBox.Show("Archivo cargado con éxito!", "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        return vacas;
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Error cargando el archivo!\n" + ex.Message, "Cargar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        return new List<Vaca>();
+    }
                 }
             }
         }

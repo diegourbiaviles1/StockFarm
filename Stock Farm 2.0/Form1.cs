@@ -76,6 +76,14 @@ namespace Stock_Farm_2._0
         {
 
         }
+        private byte[] ConvertirImagenABytes(Image imagen)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                imagen.Save(ms, imagen.RawFormat);
+                return ms.ToArray();
+            }
+        }
 
         private void txtArete_TextChanged(object sender, EventArgs e)
         {
@@ -162,6 +170,8 @@ namespace Stock_Farm_2._0
             rdMacho.Checked = false;
             rdHembra.Checked = false;
             txtPeso.Text = "";
+            pictureBox1.Image = null;
+
 
             ActualizarGridView();
         }
@@ -212,6 +222,7 @@ namespace Stock_Farm_2._0
                 vaca.FechaDesparacitada = chkDesparacitada.Checked ? dateTimePickerDesparacitada.Value : DateTime.MinValue;
                 vaca.ControlDesparasitante = chkVacuna.Checked;
 
+
                 // Validar campo 'Sexo'
                 char Sexo = ' ';
                         if (!rdMacho.Checked && !rdHembra.Checked)
@@ -252,7 +263,9 @@ namespace Stock_Farm_2._0
                             rdMacho.Checked = false;
                             rdHembra.Checked = false;   
                             txtPeso.Text = "\n";
-                            VacaSeleccionada = -1;
+                pictureBox1.Image = null;
+
+                VacaSeleccionada = -1;
 
                         ActualizarGridView();
                     }
@@ -300,6 +313,19 @@ namespace Stock_Farm_2._0
                         }
 
                         txtPeso.Text = pesos;
+
+                        if (vacas[index].Imagen != null)
+                        {
+                            using (MemoryStream ms = new MemoryStream(vacas[index].Imagen))
+                            {
+                                pictureBox1.Image = Image.FromStream(ms); // Asignar la imagen al PictureBox
+                            }
+                        }
+                        else
+                        {
+                            pictureBox1.Image = null; // Si no hay imagen, limpiar el PictureBox
+                        }
+
                     }
                 }
                 catch (Exception ex)
@@ -356,6 +382,26 @@ namespace Stock_Farm_2._0
 
             // Configurar evento para que, al cerrar el nuevo formulario, el formulario principal vuelva a mostrarse
             formBusqueda.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btnSubirImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog archivo = new OpenFileDialog
+            {
+                Filter = "Archivos de Imagen|*.jpg;*.jpeg;*.png;*.gif"
+            };
+
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                Image imagen = Image.FromFile(archivo.FileName);
+                pictureBox1.Image = imagen;
+
+                // Si se está editando o agregando, asigna la imagen
+                if (VacaSeleccionada >= 0)
+                {
+                    vacas[VacaSeleccionada].Imagen = ConvertirImagenABytes(imagen);
+                }
+            }
         }
     }
 }
