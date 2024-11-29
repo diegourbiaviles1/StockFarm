@@ -42,3 +42,67 @@ C:\Users\diego\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.cs
 C:\Users\diego\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.csproj.CoreCompileInputs.cache
 C:\Users\diego\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.exe
 C:\Users\diego\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.pdb
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\Stock Farm 2.0.exe.config
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\Stock Farm 2.0.exe
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\Stock Farm 2.0.pdb
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\EnvDTE.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\stdole.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.csproj.AssemblyReference.cache
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.StockFarm.resources
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.Properties.Resources.resources
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.csproj.GenerateResource.cache
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.csproj.CoreCompileInputs.cache
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Fa.504680B9.Up2Date
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.exe
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.pdb
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.FormReporte.resources

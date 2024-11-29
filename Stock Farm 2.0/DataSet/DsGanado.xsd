@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsGanado" targetNamespace="http://tempuri.org/DsGanado.xsd" xmlns:mstns="http://tempuri.org/DsGanado.xsd" xmlns="http://tempuri.org/DsGanado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsGanado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DsGanado" msprop:Generator_DataSetName="DsGanado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GanadoDT" msprop:Generator_RowEvHandlerName="GanadoDTRowChangeEventHandler" msprop:Generator_RowDeletedName="GanadoDTRowDeleted" msprop:Generator_RowDeletingName="GanadoDTRowDeleting" msprop:Generator_RowEvArgName="GanadoDTRowChangeEvent" msprop:Generator_TablePropName="GanadoDT" msprop:Generator_RowChangedName="GanadoDTRowChanged" msprop:Generator_RowChangingName="GanadoDTRowChanging" msprop:Generator_TableClassName="GanadoDTDataTable" msprop:Generator_RowClassName="GanadoDTRow" msprop:Generator_TableVarName="tableGanadoDT" msprop:Generator_UserTableName="GanadoDT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Arete" msprop:Generator_ColumnPropNameInRow="Arete" msprop:Generator_ColumnPropNameInTable="AreteColumn" msprop:Generator_ColumnVarNameInTable="columnArete" msprop:Generator_UserColumnName="Arete" type="xs:int" minOccurs="0" />
+              <xs:element name="Raza" msprop:Generator_ColumnPropNameInRow="Raza" msprop:Generator_ColumnPropNameInTable="RazaColumn" msprop:Generator_ColumnVarNameInTable="columnRaza" msprop:Generator_UserColumnName="Raza" type="xs:string" minOccurs="0" />
+              <xs:element name="Sexo" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn" msprop:Generator_ColumnVarNameInTable="columnSexo" msprop:Generator_UserColumnName="Sexo" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaNacimiento" msdata:DataType="System.DateTimeOffset" msdata:Caption="Nacimiento" msprop:Generator_ColumnPropNameInRow="FechaNacimiento" msprop:Generator_ColumnPropNameInTable="FechaNacimientoColumn" msprop:Generator_ColumnVarNameInTable="columnFechaNacimiento" msprop:Generator_UserColumnName="FechaNacimiento" type="xs:anyType" minOccurs="0" />
+              <xs:element name="FechaVacuna" msdata:Caption="Vacuna" msprop:Generator_ColumnPropNameInRow="FechaVacuna" msprop:Generator_ColumnPropNameInTable="FechaVacunaColumn" msprop:Generator_ColumnVarNameInTable="columnFechaVacuna" msprop:Generator_UserColumnName="FechaVacuna" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaDesparacitada" msdata:Caption="Desparasitante" msprop:Generator_ColumnPropNameInRow="FechaDesparacitada" msprop:Generator_ColumnPropNameInTable="FechaDesparacitadaColumn" msprop:Generator_ColumnVarNameInTable="columnFechaDesparacitada" msprop:Generator_UserColumnName="FechaDesparacitada" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Peso" msprop:Generator_ColumnPropNameInRow="Peso" msprop:Generator_ColumnPropNameInTable="PesoColumn" msprop:Generator_ColumnVarNameInTable="columnPeso" msprop:Generator_UserColumnName="Peso" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

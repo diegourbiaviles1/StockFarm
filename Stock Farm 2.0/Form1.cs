@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Stock_Farm_2._0.VACA;
 using System.IO;
+using Microsoft.Reporting.WinForms;
 
 
 namespace Stock_Farm_2._0
@@ -322,46 +323,7 @@ namespace Stock_Farm_2._0
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (e.RowIndex >= 0) // Validar que el clic es en una fila válida
-            {
-                try
-                {
-                    // Obtener el índice desde la fila seleccionada
-                    int index = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Index"].Value);
-                    VacaSeleccionada = index; // Guardar el índice de la vaca seleccionada
 
-                    // Recuperar la vaca original desde la lista
-                    Vaca vacaRow = vacas[VacaSeleccionada];
-
-                    // Llenar los campos del formulario con los datos de la vaca seleccionada
-                    txtArete.Text = vacaRow.Arete;
-                    cmbRaza.Text = vacaRow.Raza;
-                    txtPeso.Text = string.Join(",", vacaRow.ControlPeso);
-                    dateTimePickerBorn.Value = vacaRow.FechaNacimiento;
-                    chkVacuna.Checked = vacaRow.ControlVacuna;
-                    chkDesparacitada.Checked = vacaRow.ControlDesparasitante;
-                    dateTimePickerVacuna.Value = vacaRow.FechaVacuna;
-                    dateTimePickerDesparacitada.Value = vacaRow.FechaDesparacitada;
-                    rdMacho.Checked = vacaRow.Sexo == 'M';
-                    rdHembra.Checked = vacaRow.Sexo == 'F';
-
-                    if (vacaRow.Imagen != null)
-                    {
-                        using (MemoryStream ms = new MemoryStream(vacaRow.Imagen))
-                        {
-                            pictureBox1.Image = Image.FromStream(ms);
-                        }
-                    }
-                    else
-                    {
-                        pictureBox1.Image = null;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("¡Error al seleccionar!\n" + ex.Message, "Seleccionar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -400,17 +362,19 @@ namespace Stock_Farm_2._0
 
         private void busquedaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del nuevo formulario
-            FormBusqueda formBusqueda = new FormBusqueda();
+            ReportDataSource dataSource = new ReportDataSource("DsDatos", vacas);
 
-            // Ocultar el formulario principal
-            this.Hide();
+            FormReporte formReporte = new FormReporte();
+            formReporte.reportViewer1.LocalReport.DataSources.Clear();
+            formReporte.reportViewer1.LocalReport.DataSources.Add(dataSource);
 
-            // Mostrar el nuevo formulario
-            formBusqueda.Show();
+            //Configurar archivo del reporte
+            formReporte.reportViewer1.LocalReport.ReportEmbeddedResource = "Stock_Farm_2._0.Reportes.RptGanado.rdlc";
+            //Refrescar el reporte
+            formReporte.reportViewer1.RefreshReport();
 
-            // Configurar evento para que, al cerrar el nuevo formulario, el formulario principal vuelva a mostrarse
-            formBusqueda.FormClosed += (s, args) => this.Show();
+            //Visualizar el formulario
+            formReporte.ShowDialog();
         }
 
         private void btnSubirImagen_Click(object sender, EventArgs e)
@@ -447,6 +411,96 @@ namespace Stock_Farm_2._0
             {
                 MessageBox.Show($"Error al convertir la imagen: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
+            }
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+
+            // Configurar la fuente de datos para el reporte
+            ReportDataSource dataSource = new ReportDataSource("DsDatos", vacas);
+
+            // Crear una instancia del formulario del reporte
+            FormReporte formReporte = new FormReporte();
+            formReporte.reportViewer1.LocalReport.DataSources.Clear();
+            formReporte.reportViewer1.LocalReport.DataSources.Add(dataSource);
+
+            // Configurar el archivo del reporte
+            formReporte.reportViewer1.LocalReport.ReportEmbeddedResource = "Stock_Farm_2._0.Reportes.RptGanado.rdlc";
+
+            // Refrescar y mostrar el reporte
+            formReporte.reportViewer1.RefreshReport();
+            formReporte.ShowDialog();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Validar que el clic es en una fila válida
+            {
+                try
+                {
+                    // Seleccionar toda la fila
+                    dataGridView1.Rows[e.RowIndex].Selected = true;
+
+                    // Usar el índice de la fila seleccionada
+                    int index = e.RowIndex;
+
+                    // Verificar si la lista tiene datos
+                    if (vacas == null || vacas.Count == 0)
+                    {
+                        MessageBox.Show("La lista de vacas está vacía.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Validar si el índice está dentro del rango
+                    if (index < 0 || index >= vacas.Count)
+                    {
+                        MessageBox.Show("Índice fuera de rango.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Recuperar la vaca seleccionada
+                    Vaca vacaRow = vacas[index];
+                    VacaSeleccionada = index; // Guardar el índice de la vaca seleccionada
+
+                    // Llenar los campos del formulario con los datos de la vaca seleccionada
+                    txtArete.Text = vacaRow.Arete;
+                    cmbRaza.Text = vacaRow.Raza;
+                    txtPeso.Text = string.Join(",", vacaRow.ControlPeso);
+                    dateTimePickerBorn.Value = vacaRow.FechaNacimiento;
+
+                    // Verificar el estado de vacuna y desparasitante
+                    chkVacuna.Checked = vacaRow.ControlVacuna;
+                    dateTimePickerVacuna.Value = vacaRow.ControlVacuna && vacaRow.FechaVacuna != DateTime.MinValue
+                        ? vacaRow.FechaVacuna
+                        : DateTime.Now;
+
+                    chkDesparacitada.Checked = vacaRow.ControlDesparasitante;
+                    dateTimePickerDesparacitada.Value = vacaRow.ControlDesparasitante && vacaRow.FechaDesparacitada != DateTime.MinValue
+                        ? vacaRow.FechaDesparacitada
+                        : DateTime.Now;
+
+                    // Sexo
+                    rdMacho.Checked = vacaRow.Sexo == 'M';
+                    rdHembra.Checked = vacaRow.Sexo == 'F';
+
+                    // Cargar la imagen si existe
+                    if (vacaRow.Imagen != null && vacaRow.Imagen.Length > 0)
+                    {
+                        using (MemoryStream ms = new MemoryStream(vacaRow.Imagen))
+                        {
+                            pictureBox1.Image = Image.FromStream(ms);
+                        }
+                    }
+                    else
+                    {
+                        pictureBox1.Image = null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"¡Error al seleccionar!\n{ex.Message}", "Seleccionar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
