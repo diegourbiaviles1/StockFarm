@@ -16,7 +16,7 @@ namespace Stock_Farm_2._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StockFarm());
+            Application.Run(new Login());
         }
     }
 }
