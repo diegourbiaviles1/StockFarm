@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Stock_Farm_2._0
 {
-    public partial class FormReporte : Form
+    public partial class Reporte : Form
     {
-        public FormReporte()
+        public Reporte()
         {
             InitializeComponent();
+
         }
 
         private void FormReporte_Load(object sender, EventArgs e)

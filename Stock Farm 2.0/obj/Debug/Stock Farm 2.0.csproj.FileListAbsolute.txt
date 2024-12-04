@@ -105,7 +105,6 @@ C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.cs
 C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Fa.504680B9.Up2Date
 C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.exe
 C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.pdb
-C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.FormReporte.resources
 C:\Users\diego\Source\Repos\StockFarm3.0\Stock Farm 2.0\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\diego\Source\Repos\StockFarm3.0\Stock Farm 2.0\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\diego\Source\Repos\StockFarm3.0\Stock Farm 2.0\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -171,3 +170,5 @@ C:\Users\diego\Source\Repos\StockFarm3.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0
 C:\Users\diego\Source\Repos\StockFarm3.0\Stock Farm 2.0\obj\Debug\Stock Fa.504680B9.Up2Date
 C:\Users\diego\Source\Repos\StockFarm3.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.exe
 C:\Users\diego\Source\Repos\StockFarm3.0\Stock Farm 2.0\obj\Debug\Stock Farm 2.0.pdb
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.Login.resources
+C:\Users\leoag\Source\Repos\StockFarm\Stock Farm 2.0\obj\Debug\Stock_Farm_2._0.Reporte.resources

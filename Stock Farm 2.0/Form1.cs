@@ -35,6 +35,8 @@ namespace Stock_Farm_2._0
             // Asociar eventos CheckedChanged a los CheckBox
             chkVacuna.CheckedChanged += chkVacuna_CheckedChanged;
             chkDesparacitada.CheckedChanged += chkDesparacitada_CheckedChanged;
+
+            this.FormClosing += Form1_FormClosing;
         }
         private void guardarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -161,7 +163,7 @@ namespace Stock_Farm_2._0
 
             // Validar campo 'Sexo'
             char Sexo = ' ';
-            if (!rdMacho.Checked && !rdHembra.Checked) 
+            if (!rdMacho.Checked && !rdHembra.Checked)
             {
                 MessageBox.Show("El campo 'Sexo' está vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -222,102 +224,89 @@ namespace Stock_Farm_2._0
                 MessageBox.Show("¡No hay ninguna vaca seleccionada!", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else
+
+            try
             {
-                if (MessageBox.Show("¿Está seguro que desea eliminar a '" + vacas[VacaSeleccionada].Arete + "'?", "Eliminar",
+                var vacaAEliminar = vacas[VacaSeleccionada];
+                if (MessageBox.Show($"¿Está seguro de que desea eliminar a la vaca con arete '{vacaAEliminar.Arete}'?", "Eliminar",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     vacas.RemoveAt(VacaSeleccionada);
                     ActualizarGridView();
+                    MessageBox.Show("Vaca eliminada correctamente.", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+                    VacaSeleccionada = -1; // Limpiar selección
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al eliminar la vaca: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-                private void btnEditar_Click(object sender, EventArgs e)
-                {
-                    if (VacaSeleccionada == -1)
-                    {
-                        MessageBox.Show("¡No hay ninguna vaca seleccionada!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-                    else
-                    {
-                        Vaca vaca = new Vaca();
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (VacaSeleccionada == -1)
+            {
+                MessageBox.Show("¡No hay ninguna vaca seleccionada!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-                        // Validar campo 'Arete'
-                        if (txtArete.Text == "")
+            try
+            {
+                // Validar campos antes de editar
+                if (string.IsNullOrWhiteSpace(txtArete.Text))
                 {
-                            MessageBox.Show("El campo 'Arete' está vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
+                    MessageBox.Show("El campo 'Arete' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                // Asignar propiedades de la vaca
+                if (string.IsNullOrWhiteSpace(cmbRaza.Text))
+                {
+                    MessageBox.Show("Debe seleccionar una raza.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!rdMacho.Checked && !rdHembra.Checked)
+                {
+                    MessageBox.Show("Debe seleccionar un sexo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Modificar los datos de la vaca seleccionada
+                var vaca = vacas[VacaSeleccionada];
                 vaca.Arete = txtArete.Text;
                 vaca.Raza = cmbRaza.Text;
-                vaca.ControlPeso = new List<Decimal>() { };
                 vaca.FechaNacimiento = dateTimePickerBorn.Value;
                 vaca.ControlVacuna = chkVacuna.Checked;
                 vaca.FechaVacuna = chkVacuna.Checked ? dateTimePickerVacuna.Value : DateTime.MinValue;
+                vaca.ControlDesparasitante = chkDesparacitada.Checked;
                 vaca.FechaDesparacitada = chkDesparacitada.Checked ? dateTimePickerDesparacitada.Value : DateTime.MinValue;
-                vaca.ControlDesparasitante = chkVacuna.Checked;
+                vaca.Sexo = rdMacho.Checked ? 'M' : 'F';
 
+                // Procesar control de pesos
+                var pesos = txtPeso.Text.Split(',');
+                vaca.ControlPeso = pesos
+                    .Select(p => decimal.TryParse(p.Trim(), out var peso) ? peso : 0)
+                    .Where(p => p > 0) // Ignorar pesos no válidos
+                    .ToList();
 
-                // Validar campo 'Sexo'
-                char Sexo = ' ';
-                        if (!rdMacho.Checked && !rdHembra.Checked)
-                {
-                            MessageBox.Show("El campo 'Sexo' está vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-
-                        if (rdMacho.Checked) Sexo = 'M';
-                else if (rdHembra.Checked) Sexo = 'F';
-
-                vaca.Sexo = Sexo;
-
-                        // Procesar datos de control de peso
-                        string[] pesos = txtPeso.Text.Split('\n');
-
-                List<Decimal> controlPesos = new List<Decimal>() { };
-                        foreach (string peso in pesos)
-                        {
-                            Decimal pesoDecimal;
-                            if (!Decimal.TryParse(peso, out pesoDecimal))
-                            {
-                                MessageBox.Show("Control de Peso: El texto '" + peso + "' no se pudo convertir a decimal", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-                            controlPesos.Add(pesoDecimal);
-                        }
-
-                        vaca.ControlPeso = controlPesos;
-                // Actualizar la imagen si existe en el PictureBox
+                // Procesar imagen si existe
                 if (pictureBox1.Image != null)
                 {
-                    vacas[VacaSeleccionada].Imagen = ConvertirBytesAImagen(pictureBox1.Image);
-                }
-                else
-                {
-                    vacas[VacaSeleccionada].Imagen = null; // Limpiar imagen si no hay
+                    vaca.Imagen = ConvertirBytesAImagen(pictureBox1.Image);
                 }
 
-
-                // Actualizar vaca en la lista y resetear campos del formulario
-                vacas[VacaSeleccionada] = vaca;
-                            txtArete.Text = "\n";
-                            cmbRaza.Text = "\n";
-                            txtPeso.Text = "\n";
-                            chkVacuna.Checked = false;
-                            chkDesparacitada.Checked = false;
-                            rdMacho.Checked = false;
-                            rdHembra.Checked = false;   
-                            txtPeso.Text = "\n";
-                pictureBox1.Image = null;
-
-                VacaSeleccionada = -1;
-
-                        ActualizarGridView();
-                    }
+                // Actualizar el DataGridView
+                ActualizarGridView();
+                MessageBox.Show("Datos de la vaca editados correctamente.", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpiarCampos();
+                VacaSeleccionada = -1; // Limpiar selección
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al editar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -364,7 +353,7 @@ namespace Stock_Farm_2._0
         {
             ReportDataSource dataSource = new ReportDataSource("DsDatos", vacas);
 
-            FormReporte formReporte = new FormReporte();
+            Reporte formReporte = new Reporte();
             formReporte.reportViewer1.LocalReport.DataSources.Clear();
             formReporte.reportViewer1.LocalReport.DataSources.Add(dataSource);
 
@@ -421,7 +410,7 @@ namespace Stock_Farm_2._0
             ReportDataSource dataSource = new ReportDataSource("DsDatos", vacas);
 
             // Crear una instancia del formulario del reporte
-            FormReporte formReporte = new FormReporte();
+            Reporte formReporte = new Reporte();
             formReporte.reportViewer1.LocalReport.DataSources.Clear();
             formReporte.reportViewer1.LocalReport.DataSources.Add(dataSource);
 
@@ -433,75 +422,96 @@ namespace Stock_Farm_2._0
             formReporte.ShowDialog();
         }
 
+        private int? filaSeleccionada = null; // Variable para almacenar la fila seleccionada previamente
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) // Validar que el clic es en una fila válida
             {
                 try
                 {
+                    // Si la fila seleccionada es la misma, limpiar selección y campos
+                    if (filaSeleccionada == e.RowIndex)
+                    {
+                        filaSeleccionada = null; // Limpiar selección
+                        dataGridView1.ClearSelection(); // Deseleccionar la fila
+                        LimpiarCampos(); // Método para limpiar los campos del formulario
+                        VacaSeleccionada = -1; // Restablecer la variable de selección
+                        return; // Salir del evento
+                    }
+
+                    // Guardar el índice de la nueva fila seleccionada
+                    filaSeleccionada = e.RowIndex;
+                    VacaSeleccionada = e.RowIndex; // Actualizar índice global para edición/eliminación
+
                     // Seleccionar toda la fila
                     dataGridView1.Rows[e.RowIndex].Selected = true;
 
-                    // Usar el índice de la fila seleccionada
-                    int index = e.RowIndex;
-
-                    // Verificar si la lista tiene datos
-                    if (vacas == null || vacas.Count == 0)
+                    // Validar que la lista tiene datos y el índice está dentro del rango
+                    if (vacas == null || VacaSeleccionada < 0 || VacaSeleccionada >= vacas.Count)
                     {
-                        MessageBox.Show("La lista de vacas está vacía.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    // Validar si el índice está dentro del rango
-                    if (index < 0 || index >= vacas.Count)
-                    {
-                        MessageBox.Show("Índice fuera de rango.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("La lista de vacas está vacía o el índice está fuera de rango.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
                     // Recuperar la vaca seleccionada
-                    Vaca vacaRow = vacas[index];
-                    VacaSeleccionada = index; // Guardar el índice de la vaca seleccionada
+                    Vaca vacaRow = vacas[VacaSeleccionada];
 
                     // Llenar los campos del formulario con los datos de la vaca seleccionada
                     txtArete.Text = vacaRow.Arete;
                     cmbRaza.Text = vacaRow.Raza;
                     txtPeso.Text = string.Join(",", vacaRow.ControlPeso);
-                    dateTimePickerBorn.Value = vacaRow.FechaNacimiento;
+                    dateTimePickerBorn.Value = vacaRow.FechaNacimiento != DateTime.MinValue ? vacaRow.FechaNacimiento : DateTime.Now;
 
-                    // Verificar el estado de vacuna y desparasitante
                     chkVacuna.Checked = vacaRow.ControlVacuna;
-                    dateTimePickerVacuna.Value = vacaRow.ControlVacuna && vacaRow.FechaVacuna != DateTime.MinValue
-                        ? vacaRow.FechaVacuna
-                        : DateTime.Now;
+                    dateTimePickerVacuna.Value = vacaRow.FechaVacuna != DateTime.MinValue ? vacaRow.FechaVacuna : DateTime.Now;
 
                     chkDesparacitada.Checked = vacaRow.ControlDesparasitante;
-                    dateTimePickerDesparacitada.Value = vacaRow.ControlDesparasitante && vacaRow.FechaDesparacitada != DateTime.MinValue
-                        ? vacaRow.FechaDesparacitada
-                        : DateTime.Now;
+                    dateTimePickerDesparacitada.Value = vacaRow.FechaDesparacitada != DateTime.MinValue ? vacaRow.FechaDesparacitada : DateTime.Now;
 
-                    // Sexo
                     rdMacho.Checked = vacaRow.Sexo == 'M';
                     rdHembra.Checked = vacaRow.Sexo == 'F';
 
-                    // Cargar la imagen si existe
-                    if (vacaRow.Imagen != null && vacaRow.Imagen.Length > 0)
-                    {
-                        using (MemoryStream ms = new MemoryStream(vacaRow.Imagen))
-                        {
-                            pictureBox1.Image = Image.FromStream(ms);
-                        }
-                    }
-                    else
-                    {
-                        pictureBox1.Image = null;
-                    }
+                    pictureBox1.Image = vacaRow.Imagen != null && vacaRow.Imagen.Length > 0
+                        ? Image.FromStream(new MemoryStream(vacaRow.Imagen))
+                        : null;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"¡Error al seleccionar!\n{ex.Message}", "Seleccionar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"¡Error al cargar la vaca seleccionada: {ex.Message}!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+
+        // Método para limpiar los campos del formulario
+        private void LimpiarCampos()
+        {
+            txtArete.Text = "";
+            cmbRaza.Text = "";
+            txtPeso.Text = "";
+            chkVacuna.Checked = false;
+            chkDesparacitada.Checked = false;
+            rdMacho.Checked = false;
+            rdHembra.Checked = false;
+            pictureBox1.Image = null;
+            dateTimePickerBorn.Value = DateTime.Now;
+            dateTimePickerVacuna.Value = DateTime.Now;
+            dateTimePickerDesparacitada.Value = DateTime.Now;
+        }
+
+        //Evitar que se quede un proceso abierto en el administrador de tareas
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is Reporte formReporte)
+                {
+                    formReporte.reportViewer1.LocalReport.ReleaseSandboxAppDomain();
+                    formReporte.Dispose();
+                }
+            }
+
+            Application.Exit(); // Finaliza la aplicación completamente
         }
     }
 }

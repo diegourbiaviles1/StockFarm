@@ -43,5 +43,15 @@ namespace Stock_Farm_2._0
                 MessageBox.Show("Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

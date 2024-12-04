@@ -579,10 +579,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DsDatos</DataSetName>
-        <Top>7.94314cm</Top>
-        <Left>1.99412cm</Left>
+        <Top>9.16022cm</Top>
+        <Left>2.9148cm</Left>
         <Height>1.2cm</Height>
-        <Width>18.48778cm</Width>
+        <Width>18.02917cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -595,7 +595,8 @@
         <Source>Embedded</Source>
         <Value>STOCKFARM3modified</Value>
         <Sizing>FitProportional</Sizing>
-        <Left>6.69426cm</Left>
+        <Top>2.1343cm</Top>
+        <Left>8.88148cm</Left>
         <Height>6.49676cm</Height>
         <Width>6.95042cm</Width>
         <ZIndex>1</ZIndex>
@@ -605,60 +606,49 @@
           </Border>
         </Style>
       </Image>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Reporte de Inventario de Ganado</Value>
+                <Style>
+                  <FontFamily>Elephant</FontFamily>
+                  <FontSize>18pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox17</rd:DefaultName>
+        <Top>0.27022cm</Top>
+        <Left>6.31092cm</Left>
+        <Height>1.35255cm</Height>
+        <Width>11.81555cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>4.18056in</Height>
     <Style />
   </Body>
-  <Width>8.71192in</Width>
+  <Width>9.02207in</Width>
   <Page>
-    <PageHeader>
-      <Height>3.12842cm</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Textbox Name="Textbox17">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Reporte de Inventario de Ganado</Value>
-                  <Style>
-                    <FontFamily>Elephant</FontFamily>
-                    <FontSize>18pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Center</TextAlign>
-              </Style>
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>0.74648cm</Top>
-          <Left>4.21189cm</Left>
-          <Height>1.35255cm</Height>
-          <Width>11.81555cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageHeader>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>29.7cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>
