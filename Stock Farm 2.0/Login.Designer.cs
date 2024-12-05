@@ -43,10 +43,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(460, 40);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(307, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(451, 311);
+            this.pictureBox1.Size = new System.Drawing.Size(301, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -59,22 +58,19 @@
             this.grpIngresar.Controls.Add(this.txtUsuario);
             this.grpIngresar.Controls.Add(this.label2);
             this.grpIngresar.Controls.Add(this.label1);
-            this.grpIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpIngresar.Location = new System.Drawing.Point(386, 372);
-            this.grpIngresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpIngresar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpIngresar.Location = new System.Drawing.Point(257, 242);
             this.grpIngresar.Name = "grpIngresar";
-            this.grpIngresar.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpIngresar.Size = new System.Drawing.Size(573, 360);
+            this.grpIngresar.Size = new System.Drawing.Size(382, 234);
             this.grpIngresar.TabIndex = 1;
             this.grpIngresar.TabStop = false;
             this.grpIngresar.Text = "Ingresar";
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(228, 285);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnIngresar.Location = new System.Drawing.Point(165, 185);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(112, 43);
+            this.btnIngresar.Size = new System.Drawing.Size(75, 28);
             this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -82,51 +78,48 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(228, 165);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtContraseña.Location = new System.Drawing.Point(152, 107);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(187, 30);
+            this.txtContraseña.Size = new System.Drawing.Size(126, 26);
             this.txtContraseña.TabIndex = 3;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(228, 68);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsuario.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(152, 44);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(187, 30);
+            this.txtUsuario.Size = new System.Drawing.Size(126, 26);
             this.txtUsuario.TabIndex = 2;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 169);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(46, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 25);
+            this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(46, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 25);
+            this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario:";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
-            this.ClientSize = new System.Drawing.Size(1287, 768);
+            this.ClientSize = new System.Drawing.Size(858, 499);
             this.Controls.Add(this.grpIngresar);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

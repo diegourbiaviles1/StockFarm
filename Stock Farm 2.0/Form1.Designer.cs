@@ -74,12 +74,10 @@
             // grpInventario
             // 
             this.grpInventario.Controls.Add(this.dataGridView1);
-            this.grpInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpInventario.Location = new System.Drawing.Point(18, 605);
-            this.grpInventario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpInventario.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpInventario.Location = new System.Drawing.Point(12, 393);
             this.grpInventario.Name = "grpInventario";
-            this.grpInventario.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpInventario.Size = new System.Drawing.Size(1522, 425);
+            this.grpInventario.Size = new System.Drawing.Size(1015, 276);
             this.grpInventario.TabIndex = 0;
             this.grpInventario.TabStop = false;
             this.grpInventario.Text = "Inventario";
@@ -89,12 +87,12 @@
             this.dataGridView1.AllowDrop = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 29);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1504, 386);
+            this.dataGridView1.Size = new System.Drawing.Size(1003, 251);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -116,33 +114,28 @@
             this.grpInformacion.Controls.Add(this.label2);
             this.grpInformacion.Controls.Add(this.txtArete);
             this.grpInformacion.Controls.Add(this.label1);
-            this.grpInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpInformacion.Location = new System.Drawing.Point(18, 68);
-            this.grpInformacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpInformacion.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpInformacion.Location = new System.Drawing.Point(12, 44);
             this.grpInformacion.Name = "grpInformacion";
-            this.grpInformacion.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpInformacion.Size = new System.Drawing.Size(1364, 528);
+            this.grpInformacion.Size = new System.Drawing.Size(909, 343);
             this.grpInformacion.TabIndex = 1;
             this.grpInformacion.TabStop = false;
-            this.grpInformacion.Text = "Información";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(1029, 129);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(674, 68);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(282, 267);
+            this.pictureBox1.Size = new System.Drawing.Size(201, 190);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
             // btnSubirImagen
             // 
-            this.btnSubirImagen.Location = new System.Drawing.Point(1096, 432);
-            this.btnSubirImagen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSubirImagen.Location = new System.Drawing.Point(724, 281);
             this.btnSubirImagen.Name = "btnSubirImagen";
-            this.btnSubirImagen.Size = new System.Drawing.Size(166, 35);
+            this.btnSubirImagen.Size = new System.Drawing.Size(111, 29);
             this.btnSubirImagen.TabIndex = 13;
             this.btnSubirImagen.Text = "Subir Imagen";
             this.btnSubirImagen.UseVisualStyleBackColor = true;
@@ -160,19 +153,17 @@
             "Jersey",
             "Guzerat",
             "Nelore"});
-            this.cmbRaza.Location = new System.Drawing.Point(102, 125);
-            this.cmbRaza.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbRaza.Location = new System.Drawing.Point(68, 81);
             this.cmbRaza.Name = "cmbRaza";
-            this.cmbRaza.Size = new System.Drawing.Size(180, 30);
+            this.cmbRaza.Size = new System.Drawing.Size(121, 28);
             this.cmbRaza.TabIndex = 12;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 129);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(17, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 22);
+            this.label4.Size = new System.Drawing.Size(42, 20);
             this.label4.TabIndex = 11;
             this.label4.Text = "Raza:";
             // 
@@ -180,11 +171,9 @@
             // 
             this.groupBox1.Controls.Add(this.rdHembra);
             this.groupBox1.Controls.Add(this.rdMacho);
-            this.groupBox1.Location = new System.Drawing.Point(30, 385);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Location = new System.Drawing.Point(20, 250);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(510, 74);
+            this.groupBox1.Size = new System.Drawing.Size(340, 48);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sexo";
@@ -192,10 +181,9 @@
             // rdHembra
             // 
             this.rdHembra.AutoSize = true;
-            this.rdHembra.Location = new System.Drawing.Point(310, 29);
-            this.rdHembra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdHembra.Location = new System.Drawing.Point(207, 19);
             this.rdHembra.Name = "rdHembra";
-            this.rdHembra.Size = new System.Drawing.Size(104, 26);
+            this.rdHembra.Size = new System.Drawing.Size(75, 24);
             this.rdHembra.TabIndex = 1;
             this.rdHembra.TabStop = true;
             this.rdHembra.Text = "Hembra";
@@ -204,10 +192,9 @@
             // rdMacho
             // 
             this.rdMacho.AutoSize = true;
-            this.rdMacho.Location = new System.Drawing.Point(98, 29);
-            this.rdMacho.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdMacho.Location = new System.Drawing.Point(65, 19);
             this.rdMacho.Name = "rdMacho";
-            this.rdMacho.Size = new System.Drawing.Size(93, 26);
+            this.rdMacho.Size = new System.Drawing.Size(68, 24);
             this.rdMacho.TabIndex = 0;
             this.rdMacho.TabStop = true;
             this.rdMacho.Text = "Macho";
@@ -216,48 +203,43 @@
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(128, 474);
-            this.txtPeso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPeso.Location = new System.Drawing.Point(85, 308);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(148, 28);
+            this.txtPeso.Size = new System.Drawing.Size(100, 26);
             this.txtPeso.TabIndex = 9;
             this.txtPeso.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 478);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(17, 311);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 22);
+            this.label3.Size = new System.Drawing.Size(67, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Peso KG:";
             // 
             // dateTimePickerDesparacitada
             // 
             this.dateTimePickerDesparacitada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDesparacitada.Location = new System.Drawing.Point(370, 323);
-            this.dateTimePickerDesparacitada.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePickerDesparacitada.Location = new System.Drawing.Point(247, 210);
             this.dateTimePickerDesparacitada.Name = "dateTimePickerDesparacitada";
-            this.dateTimePickerDesparacitada.Size = new System.Drawing.Size(150, 28);
+            this.dateTimePickerDesparacitada.Size = new System.Drawing.Size(101, 26);
             this.dateTimePickerDesparacitada.TabIndex = 7;
             // 
             // dateTimePickerVacuna
             // 
             this.dateTimePickerVacuna.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerVacuna.Location = new System.Drawing.Point(30, 323);
-            this.dateTimePickerVacuna.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePickerVacuna.Location = new System.Drawing.Point(20, 210);
             this.dateTimePickerVacuna.Name = "dateTimePickerVacuna";
-            this.dateTimePickerVacuna.Size = new System.Drawing.Size(150, 28);
+            this.dateTimePickerVacuna.Size = new System.Drawing.Size(101, 26);
             this.dateTimePickerVacuna.TabIndex = 6;
             // 
             // chkDesparacitada
             // 
             this.chkDesparacitada.AutoSize = true;
-            this.chkDesparacitada.Location = new System.Drawing.Point(370, 271);
-            this.chkDesparacitada.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkDesparacitada.Location = new System.Drawing.Point(247, 176);
             this.chkDesparacitada.Name = "chkDesparacitada";
-            this.chkDesparacitada.Size = new System.Drawing.Size(165, 26);
+            this.chkDesparacitada.Size = new System.Drawing.Size(115, 24);
             this.chkDesparacitada.TabIndex = 5;
             this.chkDesparacitada.Text = "Desparacitada";
             this.chkDesparacitada.UseVisualStyleBackColor = true;
@@ -265,10 +247,9 @@
             // chkVacuna
             // 
             this.chkVacuna.AutoSize = true;
-            this.chkVacuna.Location = new System.Drawing.Point(30, 271);
-            this.chkVacuna.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkVacuna.Location = new System.Drawing.Point(20, 176);
             this.chkVacuna.Name = "chkVacuna";
-            this.chkVacuna.Size = new System.Drawing.Size(103, 26);
+            this.chkVacuna.Size = new System.Drawing.Size(74, 24);
             this.chkVacuna.TabIndex = 4;
             this.chkVacuna.Text = "Vacuna";
             this.chkVacuna.UseVisualStyleBackColor = true;
@@ -276,49 +257,44 @@
             // dateTimePickerBorn
             // 
             this.dateTimePickerBorn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerBorn.Location = new System.Drawing.Point(272, 191);
-            this.dateTimePickerBorn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePickerBorn.Location = new System.Drawing.Point(181, 124);
             this.dateTimePickerBorn.Name = "dateTimePickerBorn";
-            this.dateTimePickerBorn.Size = new System.Drawing.Size(150, 28);
+            this.dateTimePickerBorn.Size = new System.Drawing.Size(101, 26);
             this.dateTimePickerBorn.TabIndex = 3;
             this.dateTimePickerBorn.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 198);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(17, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 22);
+            this.label2.Size = new System.Drawing.Size(143, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Fecha de Nacimiento:";
             // 
             // txtArete
             // 
-            this.txtArete.Location = new System.Drawing.Point(102, 45);
-            this.txtArete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtArete.Location = new System.Drawing.Point(68, 29);
             this.txtArete.Name = "txtArete";
-            this.txtArete.Size = new System.Drawing.Size(148, 28);
+            this.txtArete.Size = new System.Drawing.Size(100, 26);
             this.txtArete.TabIndex = 1;
             this.txtArete.TextChanged += new System.EventHandler(this.txtArete_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(17, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 22);
+            this.label1.Size = new System.Drawing.Size(45, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Arete:";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(9, 195);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(6, 91);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(112, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 25);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -326,11 +302,10 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(9, 115);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(6, 58);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(112, 35);
+            this.btnEditar.Size = new System.Drawing.Size(75, 27);
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -338,11 +313,10 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(9, 46);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAgregar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(6, 25);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(112, 35);
+            this.btnAgregar.Size = new System.Drawing.Size(75, 27);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -350,11 +324,10 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(9, 29);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(6, 19);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(112, 35);
+            this.btnGuardar.Size = new System.Drawing.Size(75, 28);
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -362,11 +335,10 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.Location = new System.Drawing.Point(9, 74);
-            this.btnCargar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCargar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.Location = new System.Drawing.Point(6, 48);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(112, 35);
+            this.btnCargar.Size = new System.Drawing.Size(75, 26);
             this.btnCargar.TabIndex = 6;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
@@ -380,11 +352,10 @@
             // 
             this.grpArchivo.Controls.Add(this.btnGuardar);
             this.grpArchivo.Controls.Add(this.btnCargar);
-            this.grpArchivo.Location = new System.Drawing.Point(1390, 453);
-            this.grpArchivo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpArchivo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpArchivo.Location = new System.Drawing.Point(927, 307);
             this.grpArchivo.Name = "grpArchivo";
-            this.grpArchivo.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpArchivo.Size = new System.Drawing.Size(135, 123);
+            this.grpArchivo.Size = new System.Drawing.Size(90, 80);
             this.grpArchivo.TabIndex = 7;
             this.grpArchivo.TabStop = false;
             this.grpArchivo.Text = "Archivo";
@@ -392,14 +363,15 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.DarkGreen;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDeGanadoToolStripMenuItem,
             this.busquedaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1544, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(1029, 25);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -407,14 +379,14 @@
             // 
             this.gestionDeGanadoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.gestionDeGanadoToolStripMenuItem.Name = "gestionDeGanadoToolStripMenuItem";
-            this.gestionDeGanadoToolStripMenuItem.Size = new System.Drawing.Size(180, 29);
+            this.gestionDeGanadoToolStripMenuItem.Size = new System.Drawing.Size(167, 23);
             this.gestionDeGanadoToolStripMenuItem.Text = "Gestion de Ganado";
             // 
             // busquedaToolStripMenuItem
             // 
             this.busquedaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.busquedaToolStripMenuItem.Name = "busquedaToolStripMenuItem";
-            this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
+            this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(91, 23);
             this.busquedaToolStripMenuItem.Text = "Reportes";
             this.busquedaToolStripMenuItem.Click += new System.EventHandler(this.busquedaToolStripMenuItem_Click);
             // 
@@ -423,21 +395,20 @@
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.btnEditar);
             this.groupBox2.Controls.Add(this.btnAgregar);
-            this.groupBox2.Location = new System.Drawing.Point(1390, 172);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(927, 173);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(135, 271);
+            this.groupBox2.Size = new System.Drawing.Size(90, 131);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro";
             // 
             // StockFarm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(1544, 1034);
+            this.ClientSize = new System.Drawing.Size(1029, 672);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grpArchivo);
             this.Controls.Add(this.grpInformacion);
@@ -445,7 +416,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "StockFarm";
             this.Text = "StockFarm";
             this.grpInventario.ResumeLayout(false);

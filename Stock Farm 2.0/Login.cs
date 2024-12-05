@@ -51,7 +51,13 @@ namespace Stock_Farm_2._0
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-
+            var textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                string text = textBox.Text;
+                textBox.Text = new string(text.Where(c => char.IsLetter(c) || char.IsWhiteSpace(c)).ToArray());
+                textBox.SelectionStart = textBox.Text.Length;
+            }
         }
     }
 }

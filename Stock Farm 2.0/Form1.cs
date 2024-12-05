@@ -425,6 +425,7 @@ namespace Stock_Farm_2._0
         private int? filaSeleccionada = null; // Variable para almacenar la fila seleccionada previamente
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex >= 0) // Validar que el clic es en una fila válida
             {
                 try
